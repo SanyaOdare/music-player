@@ -1,1 +1,30 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+</head>
+<body>
+  <div class="player">
+    <div class="cover">
+      <img src="images/singer.jpg" alt="">
+    </div>
+    <div class="info">
+      <div class="title">Gospel Music</div>
+      <div class="singer">Trending Music 2022</div>
+    </div>
+    <div class="volume-box">
+      <span class="volume-down">
+        <i class="material-icons"></i>
+      </span>
+      <input type="range" class="volume-range" step="1" value="80" min="0" max="100"
+        oninput="music.volume = this.value/100">
+      <span class="volume-up">
+        <i class="material-icons">add</i>
+      </span>
+    </div>
+  </div>
+</body>
+</html>
