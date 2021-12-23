@@ -14,30 +14,30 @@
       <img src="images/singer.jpg" alt="">
     </div>
     <div class="info">
-      <div class="title">Gospel Music</div>
-      <div class="singer">Live Worship with &copy;Temitope - 2022</div>
+      <div class="title">Live Worship</div>
+      <div class="singer">With &copy; Temitope 2022</div>
     </div>
     <div class="volume-box">
-      <span class="volume-down"><i class="material-icons"></i></span>
+      <span class="volume-down"><i class="material-icons">remove</i></span>
       <input type="range" class="volume-range" step="1" value="80" min="0" max="100"
         oninput="music.volume = this.value/100">
       <span class="volume-up"><i class="material-icons">add</i></span>
     </div>
     <div class="btn-box">
-      <i class="material-icons" onclick="handleRepeat()">repeat</i>
+      <i class="material-icons repeat" onclick="handleRepeat()">repeat</i>
       <i class="material-icons favorite active" onclick="handleFavorite()">favorite</i>
-      <i class="material-icons volume" onclick="handleVolume()">volume-up</i>
+      <i class="material-icons volume" onclick="handleVolume()">volume_up</i>
     </div>
     <div class="music-box">
-      <input type="range" step="1" class="seekbar" value="0" max="100" oninput="handleSeekBar()">
+      <input type="range" step="1" class="seekbar" value="0" min="0" max="100" oninput="handleSeekBar()">
+  
       <audio class="music-element">
-        <source src="#" type="audio/mp3">
+        <source src="audio/Temitope Oluwadare - Oluwa E Tobi Praise Medley.mp3" type="audio/mp3">
       </audio>
-      <span class="current-time">0:0</span>
-      <span class="duration">0:0</span>
+      <span class="current-time">0:0</span><span class="duration">0:0</span>
       <span class="play" onclick="handlePlay()">
         <i class="material-icons">play_arrow</i>
-      </span>      
+      </span>
     </div>
   </div>
 
