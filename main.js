@@ -67,5 +67,15 @@ function handleVolume() {
   volBox.classList.toggle('active');
 }
 
-volumeDown.addEventListener('click', handleVolume);
-volumeUp.addEventListener('click',)
+volumeDown.addEventListener('click', handleVolumeDown);
+volumeUp.addEventListener('click', handleVolumeUp);
+
+function handleVolumeDown() {
+  volumeRange.value = Number(volumeRange.value) - 20;
+  music.volume = volumeRange / 100;
+}
+
+function handleVolumeUp() {
+  volumeRange.value = Number(volumeRange.value) + 20;
+  music.volume = volumeRange.value / 100;
+}
