@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,400;0,600;0,800;0,900;1,700&display=swap');
-
 html,
 body {
   padding: 0;
@@ -9,7 +7,7 @@ body {
   background-color: #f5e0e5;
   background-image: linear-gradient(45deg, #ff9b9c 0%, 100%);
   position: relative;
-  font-family: 'Prompt', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 *::selection {
@@ -100,5 +98,142 @@ body {
   position: absolute;
   left: 50%;
   top: 240px;
-  
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.player .info .title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 2px;
+}
+
+.player .info .singer {
+  font-size: 12px;
+  color: #72646f;
+}
+
+.player .btn-box {
+  position: absolute;
+  top: 330px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.player .btn-box i {
+  font-size: 24px;
+  color: #72646f;
+  margin: 0 30px;
+  cursor: pointer;
+}
+.player .btn-box i.active {
+  color: #ff3677;
+}
+
+.player .volume-box {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 295px;
+  transform: translateX(-50%);
+  z-index: 1;
+  padding: 0 20px;
+}
+.player .volume-box .volume-down {
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  color: #72646f;
+}
+
+.player .volume-box .volume-up {
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  color: #72646f;
+}
+
+.player .volume-box .volume-up::selection {
+  background-color: unset;
+}
+
+.player .volume-box input[type=range] {
+  height: 5px;
+  width: 150px;
+  margin: 0 0 15px 0;
+}
+
+.player .volume-box.active {
+  display: block;
+}
+
+.player .music-box {
+  position: absolute;
+  left: 50%;
+  top: 385px;
+  transform: translateX(-50%);
+}
+
+.player .music-box input[type=range] {
+  height: 5px;
+  width: 230px;
+  margin: 0 0 10px 0;
+}
+
+.player .music-box input[type=range]::-webkit-slider-thumb {
+  height: 5px;
+  width: 7px;
+}
+
+.player .music-box .current-time {
+  position: absolute;
+  left: -35px;
+  top: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #72646f;
+}
+
+.player .music-box .duration {
+  position: absolute;
+  right: -35px;
+  top: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #72646f;
+}
+
+.player .music-box .play,
+.player .music-box .pause {
+  position: absolute;
+  left: 50%;
+  top: 55px;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #fff6e7;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.player .music-box .play i,
+.player .music-box .pause i {
+  font-size: 36px;
+  color: #72646f;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-48%, -50%);
+}
+
+.player .music-box .pause i {
+  font-size: 32px;  
+  transform: translateX(-50%, -50%);
 }
