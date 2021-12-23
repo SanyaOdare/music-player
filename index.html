@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Music Player</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="player">
@@ -25,6 +26,24 @@
         <i class="material-icons">add</i>
       </span>
     </div>
+    <div class="btn-box">
+      <i class="material-icons" onclick="handleRepeat()">repeat</i>
+      <i class="material-icons favorite active" onclick="handleFavorite()">favorite</i>
+      <i class="material-icons volume" onclick="handleVolume()">volume-up</i>
+    </div>
+    <div class="music-box">
+      <input type="range" step="1" class="seekbar" value="0" max="100" oninput="handleSeekBar()">
+      <audio class="music-element">
+        <source src="#" type="audio/mp3">
+      </audio>
+      <span class="current-time">0:0</span>
+      <span class="duration">0:0</span>
+      <span class="play" onclick="handlePlay()">
+        <i class="material-icons">play_arrow</i>
+      </span>      
+    </div>
   </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
